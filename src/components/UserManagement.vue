@@ -209,7 +209,6 @@ export default {
         apellido: "",
         correo: "",
         telefono: "",
-        phone: "",
       },
       passwordError: null, // Validación para la contraseña
     };
