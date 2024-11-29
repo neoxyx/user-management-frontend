@@ -38,7 +38,7 @@
             <tr v-for="user in users" :key="user.id" class="border-t hover:bg-gray-100">
               <td class="py-2 px-4">{{ user.nombre }}</td>
               <td class="py-2 px-4">{{ user.apellido }}</td>
-              <td class="py-2 px-4">{{ user.correo }}</td>
+              <td class="py-2 px-4">{{ user.email }}</td>
               <td class="py-2 px-4">{{ user.telefono }}</td>
               <td class="py-2 px-4 text-center space-x-2">
                 <button
@@ -87,7 +87,7 @@
             >
             <input
               type="email"
-              v-model="newUser.correo"
+              v-model="newUser.email"
               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300"
               required
             />
@@ -152,7 +152,7 @@
             >
             <input
               type="email"
-              v-model="editUserForm.correo"
+              v-model="editUserForm.email"
               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300"
               required
             />
@@ -198,7 +198,7 @@ export default {
         // Datos para el nuevo usuario
         nombre: "",
         apellido: "",
-        correo: "",
+        email: "",
         telefono: "",
         password: "",
       },
@@ -207,7 +207,7 @@ export default {
         id: null,
         nombre: "",
         apellido: "",
-        correo: "",
+        email: "",
         telefono: "",
       },
       passwordError: null, // Validación para la contraseña
@@ -285,7 +285,7 @@ export default {
         this.newUser = {
           nombre: "",
           apellido: "",
-          correo: "",
+          email: "",
           telefono: "",
           password: "",
         }; // Resetear formulario
@@ -321,7 +321,7 @@ export default {
           id: null,
           nombre: "",
           apellido: "",
-          correo: "",
+          email: "",
           telefono: "",
         }; // Resetear formulario
       } catch (error) {
